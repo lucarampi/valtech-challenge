@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState } from "react";
 import MainCard, { MainCardProps } from "../components/MainCard";
 
 import PlaceCard from "../components/PlaceCard";
@@ -11,8 +12,7 @@ interface HomeProps {
 }
 
 export default function Home({ places }: HomeProps) {
-
-  const mainCardData: MainCardProps = {
+  const [mainCardData, setMainCardData] = useState<MainCardProps>({
     imageUrl:
       "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
     mainTitle: "Valtech_",
@@ -20,7 +20,8 @@ export default function Home({ places }: HomeProps) {
     buttonText: "Get in touch",
     message:
       "Complexity, uncertainty and rapid technological change have transformed the business landscape. Historical performance is an unreliable indicator of future success and the way we connect to each other matters. The way we learn matters. ",
-  };
+  });
+
   return (
     <div className={styles.container}>
       {/* <Head>
@@ -51,7 +52,8 @@ export default function Home({ places }: HomeProps) {
       <footer className={styles.footer}>
         <a
           href="https://github.com/lucarampi/valtech-challenge"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           Developed by <span className={styles.logo}>Luca A.R.</span>
         </a>
