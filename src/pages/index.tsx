@@ -46,7 +46,7 @@ export default function Home({ places }: HomeProps) {
           >
             <PlaceCard {...item} />
           </div>
-        )) : <div> Couldn't load data...</div>}
+        )) : <div> Could not load data...</div>}
       </main>
       <footer className={styles.footer}>
         <a
