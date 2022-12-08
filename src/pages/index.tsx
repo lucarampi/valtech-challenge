@@ -33,7 +33,7 @@ export default function Home({ places }: HomeProps) {
         <div className={styles.fill}>
           <MainCard {...mainCardData} />
         </div>
-        {places.map((item, index) => (
+        {places.length > 0 ? places.map((item, index) => (
           <div
             key={item.id}
             className={
@@ -46,7 +46,7 @@ export default function Home({ places }: HomeProps) {
           >
             <PlaceCard {...item} />
           </div>
-        ))}
+        )) : <div> Couldn't load data...</div>}
       </main>
       <footer className={styles.footer}>
         <a
