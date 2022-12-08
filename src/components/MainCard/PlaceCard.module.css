@@ -1,28 +1,42 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  margin: 0 auto;
-}
+
 
 .title a:hover {
   text-decoration: underline;
 }
 
 .card {
+  overflow:hidden;
   display: flex;
   position: relative;
   background-color: #111827;
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  height: 32rem;
+  height: 380px;
   border-radius: 1rem;
-  grid-column: span 4;
-  transition: all 3s 1s;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
   text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card_image{
+  object-position: center;
+  overflow:hidden;
+  object-fit:cover; 
+  position: relative;
+  filter: brightness(70%);
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  
+}
+.card:hover .card_image {
+  filter: brightness(50%)
+}
+
 
 .card_main {
   position: absolute;
@@ -36,7 +50,7 @@
   text-transform: uppercase;
 }
 .card:hover .card_main {
-  top: 12%;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -44,15 +58,19 @@
 .card_topTitle {
   text-align: center;
   letter-spacing: 0.2rem;
-  font-weight: 300;
+  font: 300 .7rem "Roboto",sans-serif;
+
 }
+
 
 .card_mainTitle {
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-weight: 700;
   font-size: 2rem;
+  font: 700 1.5rem "Roboto",sans-serif;
 }
+
 
 .card_info {
   position: absolute;
@@ -60,39 +78,44 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
+  height:200px;
   flex-direction: column;
   margin: 2rem auto;
   text-align: center;
   opacity: 0;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .card:hover .card_info {
+  overflow:hidden;
   visibility: visible;
   display: flex;
   opacity: 1;
-  top: 32%;
+  top: 180px;
   left: 50%;
 
 }
 .card_info p {
-  line-height: 150%;
+  font: 400 14px "Roboto",sans-serif;
+
 }
 
 
 .card button {
+  cursor: pointer;
   text-transform:capitalize;
   opacity: 0;
   font-weight:700;
   position:absolute;
   border: 2px solid white;
   border-radius:.425rem;
-  padding: 12px 24px;
+  padding: 10px 20px;
   bottom: 0%;
   left: 50%;
   background-color: transparent;
   color: white;
   text-align: center;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -100,14 +123,9 @@
   bottom: 10%;
   left: 50%;
   opacity: 1;
-
 }
 
-.card_message {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
+
 
 /* .card:hover,
 .card:focus,

@@ -21,8 +21,17 @@ export default function Home({ places }: HomeProps) {
       </Head>
 
       <main className={styles.main}>
-        {places.map((item) => (
-          <div key={item.id}>
+        {places.map((item, index) => (
+          <div
+            key={item.id}
+            className={
+              index === 0
+                ? styles.square
+                : index === 5
+                ? `${styles.square} ${styles.last}`
+                : ""
+            }
+          >
             <PlaceCard {...item} />
           </div>
         ))}
