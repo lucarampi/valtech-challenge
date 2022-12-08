@@ -23,7 +23,7 @@ export default function PlaceCard({
       <section className={styles.card_info}>
         <p> {message}</p>
       </section>
-      <button className="styles.card_button" type="button">
+      <button className={styles.card_button} type="button">
         {buttonText}
       </button>
     </article>

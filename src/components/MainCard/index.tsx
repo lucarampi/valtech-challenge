@@ -1,19 +1,19 @@
 "use client";
-import styles from "./PlaceCard.module.css";
+import styles from "./MainCard.module.css";
 
-interface CardProps {
+interface MainCardProps {
   buttonText: string;
   topTitle: string;
   mainTitle: string;
   message?: string;
 }
 
-export default function PlaceCard({
+export default function MainCard({
   buttonText,
   mainTitle,
   topTitle,
   message,
-}: CardProps) {
+}: MainCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.card_main}>

@@ -17,9 +17,8 @@
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  height: 32rem;
+  height: 410px;
   border-radius: 1rem;
-  grid-column: span 3 / span 3;
   transition: all 3s 1s;
   text-align: center;
 }
@@ -36,7 +35,7 @@
   text-transform: uppercase;
 }
 .card:hover .card_main {
-  top: 12%;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -44,7 +43,8 @@
 .card_topTitle {
   text-align: center;
   letter-spacing: 0.2rem;
-  font-weight: 300;
+  font: 200 .7rem "Roboto",sans-serif;
+
 }
 
 .card_mainTitle {
@@ -52,6 +52,7 @@
   letter-spacing: 0.2rem;
   font-weight: 700;
   font-size: 2rem;
+  font: 700 1.5rem "Roboto",sans-serif;
 }
 
 .card_info {
@@ -60,22 +61,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
+  height:200px;
   flex-direction: column;
   margin: 2rem auto;
   text-align: center;
   opacity: 0;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .card:hover .card_info {
+  overflow:hidden;
   visibility: visible;
   display: flex;
   opacity: 1;
-  top: 32%;
+  top: 50%;
   left: 50%;
 
 }
 .card_info p {
   line-height: 150%;
+  font: 400 14px "Roboto",sans-serif;
+
 }
 
 
@@ -92,7 +98,7 @@
   background-color: transparent;
   color: white;
   text-align: center;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

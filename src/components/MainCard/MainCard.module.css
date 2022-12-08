@@ -19,7 +19,7 @@
   align-items: center;
   height: 32rem;
   border-radius: 1rem;
-  grid-column: span 3 / span 3;
+  grid-column: span 4;
   transition: all 3s 1s;
   text-align: center;
 }
