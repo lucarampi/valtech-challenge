@@ -1,4 +1,5 @@
 import Head from "next/head";
+import MainCard, { MainCardProps } from "../components/MainCard";
 
 import PlaceCard from "../components/PlaceCard";
 import PlaceCardType from "../interfaces";
@@ -11,7 +12,15 @@ interface HomeProps {
 
 export default function Home({ places }: HomeProps) {
   console.log(places);
-
+  const mainCardData: MainCardProps = {
+    imageUrl:
+      "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
+    mainTitle: "Valtech_",
+    topTitle: "Front-end",
+    buttonText: "Get in touch",
+    message:
+      "Complexity, uncertainty and rapid technological change have transformed the business landscape. Historical performance is an unreliable indicator of future success and the way we connect to each other matters. The way we learn matters. At Valtech, we share a passion for exploration and an understanding that we cannot go it alone. Across teams, offices and disciplines - our environment, systems and practices are wired for constant learning, agility and resilience.",
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +30,9 @@ export default function Home({ places }: HomeProps) {
       </Head>
 
       <main className={styles.main}>
+        <div className={styles.fill}>
+          <MainCard {...mainCardData} />
+        </div>
         {places.map((item, index) => (
           <div
             key={item.id}

@@ -15,12 +15,11 @@
   height: 380px;
   border-radius: 1rem;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-
   text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
 
 .card_image{
@@ -117,13 +116,27 @@
   text-align: center;
   transform: translate(-50%);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none solid transparent;
 }
 
 .card:hover button {
   bottom: 10%;
   left: 50%;
   opacity: 1;
+  
 }
+.card button:hover {
+  background-color: white;
+  color: black;
+  border-color:transparent;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.card button:active {
+  background-color: white;
+  filter: brightness(80%);
+}
+
 
 
 

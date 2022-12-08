@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import styles from "./PlaceCard.module.css";
+import styles from "./MainCard.module.css";
 
-interface MainCardProps {
+export interface MainCardProps {
   buttonText: string;
   topTitle: string;
   mainTitle: string;
@@ -14,6 +14,8 @@ export default function MainCard({
   mainTitle,
   topTitle,
   imageUrl,
+  buttonText,
+  message,
 }: MainCardProps) {
   return (
     <article className={styles.card}>
@@ -28,6 +30,12 @@ export default function MainCard({
         <h3 className={styles.card_topTitle}>{topTitle}</h3>
         <h2 className={styles.card_mainTitle}>{mainTitle}</h2>
       </div>
+      <section className={styles.card_info}>
+        <p> {message}</p>
+      </section>
+      <button className={styles.card_button} type="button">
+        {buttonText}
+      </button>
     </article>
   );
 }
