@@ -17,7 +17,7 @@
   color: #ffffff;
   flex-direction: column;
   align-items: center;
-  height: 410px;
+  height: 380px;
   border-radius: 1rem;
   transition: all 3s 1s;
   text-align: center;
@@ -43,7 +43,7 @@
 .card_topTitle {
   text-align: center;
   letter-spacing: 0.2rem;
-  font: 200 .7rem "Roboto",sans-serif;
+  font: 300 .7rem "Roboto",sans-serif;
 
 }
 
@@ -79,7 +79,6 @@
 
 }
 .card_info p {
-  line-height: 150%;
   font: 400 14px "Roboto",sans-serif;
 
 }
@@ -92,7 +91,7 @@
   position:absolute;
   border: 2px solid white;
   border-radius:.425rem;
-  padding: 12px 24px;
+  padding: 10px 20px;
   bottom: 0%;
   left: 50%;
   background-color: transparent;
@@ -106,7 +105,6 @@
   bottom: 10%;
   left: 50%;
   opacity: 1;
-
 }
 
 .card_message {

@@ -1,4 +1,4 @@
-"use client";
+
 import Head from "next/head";
 import MainCard from "../components/MainCard";
 import PlaceCard from "../components/PlaceCard";
@@ -16,7 +16,7 @@ export default function Home() {
       <main className={styles.main}>
        <div className={styles.fill}>
        <PlaceCard
-          buttonText="learn more"
+          buttonText="explore more"
           mainTitle="valtech_"
           topTitle="front-end"
           message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -24,7 +24,7 @@ export default function Home() {
        </div>
         <div className={styles.square}>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="valtech_"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className={styles.rectangle}>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="valtech_"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <div className={styles.rectangle}>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="valtech_"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className={`${styles.square} ${styles.last}`}>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="FIRST"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <div className={styles.rectangle}>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="valtech_"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
         <div className={styles.rectangle }>
           <PlaceCard
-            buttonText="learn more"
+            buttonText="explore more"
             mainTitle="valtech_"
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
