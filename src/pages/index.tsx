@@ -33,7 +33,7 @@ export default function Home({ places }: HomeProps) {
         <div className={styles.fill}>
           <MainCard {...mainCardData} />
         </div>
-        {places.map((item, index) => (
+        {/* {places.map((item, index) => (
           <div
             key={item.id}
             className={
@@ -47,47 +47,7 @@ export default function Home({ places }: HomeProps) {
             <PlaceCard {...item} />
           </div>
         ))}
-        {/*       
-        
-        <div className={styles.square}>
-          <PlaceCard {...places[0]} />
-        </div>
-        <div className={styles.rectangle}>
-          <PlaceCard {...places[0]} />
-        </div>
-        <div className={styles.rectangle}>
-          <PlaceCard
-            buttonText="explore more"
-            mainTitle="valtech_"
-            topTitle="front-end"
-            message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
-          />
-        </div>
-        <div className={`${styles.square} ${styles.last}`}>
-          <PlaceCard
-            buttonText="explore more"
-            mainTitle="FIRST"
-            topTitle="front-end"
-            message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
-          />
-        </div>
-        <div className={styles.rectangle}>
-          <PlaceCard
-            buttonText="explore more"
-            mainTitle="valtech_"
-            topTitle="front-end"
-            message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
-          />
-        </div>
-        <div className={styles.rectangle}>
-          <PlaceCard
-            buttonText="explore more"
-            mainTitle="valtech_"
-            topTitle="front-end"
-            message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
-          />
-        </div> */}
-      </main>
+      </main> */}
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
