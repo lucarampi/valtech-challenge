@@ -11,7 +11,7 @@ interface HomeProps {
 }
 
 export default function Home({ places }: HomeProps) {
-  console.log(places);
+
   const mainCardData: MainCardProps = {
     imageUrl:
       "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
