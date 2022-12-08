@@ -21,14 +21,13 @@ export default function Home({ places }: HomeProps) {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.fill}>
-          <PlaceCard
-            buttonText="explore more"
-            mainTitle="valtech_"
-            topTitle="front-end"
-            message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
-          />
-        </div>
+        {places.map((item) => (
+          <div key={item.id}>
+            <PlaceCard {...item} />
+          </div>
+        ))}
+        {/*       
+        
         <div className={styles.square}>
           <PlaceCard {...places[0]} />
         </div>
@@ -66,7 +65,7 @@ export default function Home({ places }: HomeProps) {
             topTitle="front-end"
             message="Venice, the capital of the northen Italy's Veneto region, is built on more  than 100 small islands ia a lagoon in de Adriatic Sea. It has no roads, just canals"
           />
-        </div>
+        </div> */}
       </main>
       <footer className={styles.footer}>
         <a

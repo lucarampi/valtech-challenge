@@ -3,5 +3,6 @@ export default interface PlaceCardType{
     topTitle: string;
     mainTitle: string;
     message?: string;
-    imageUrl:  string
+    imageUrl:  string;
+    id:string;
 }
