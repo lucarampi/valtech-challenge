@@ -67,7 +67,8 @@
   letter-spacing: 0.1rem;
   font-weight: 700;
   font-size: 2rem;
-  font: 700 1.5rem "Roboto",sans-serif;
+  font: 700 2.5rem "Roboto",sans-serif;
+  text-transform:lowercase;
 }
 
 

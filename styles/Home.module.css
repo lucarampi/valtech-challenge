@@ -30,7 +30,6 @@
 
 @media (min-width: 768px) {
   .main {
-    background-color: red;
     grid-template-columns: repeat(2, 210px);
   }
   .square {
@@ -48,7 +47,6 @@
   .main {
     grid-template-columns: repeat(4, 210px);
     max-width: 1280px;
-    background-color: green;
   }
   .square {
     grid-column: span 2;
