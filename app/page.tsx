@@ -16,7 +16,7 @@ export default async function Page() {
     console.log(places);
   } catch (error) {
     places = [];
-    console.log("error");
+    console.log("ERROR >>>", error);
   }
 
   const mainCardData = {
@@ -41,20 +41,24 @@ export default async function Page() {
         <div className={styles.fill}>
           <MainCard {...mainCardData} />
         </div>
-        {places.map((item, index) => (
-          <div
-            key={item.id}
-            className={
-              index === 0
-                ? styles.square
-                : index === 5
-                ? `${styles.square} ${styles.last}`
-                : ""
-            }
-          >
-            <PlaceCard {...item} />
-          </div>
-        ))}
+        {places.length > 0 ? (
+          places.map((item, index) => (
+            <div
+              key={item.id}
+              className={
+                index === 0
+                  ? styles.square
+                  : index === 5
+                  ? `${styles.square} ${styles.last}`
+                  : ""
+              }
+            >
+              <PlaceCard {...item} />
+            </div>
+          ))
+        ) : (
+          <div> Could not load data...</div>
+        )}
       </main>
       <footer className={styles.footer}>
         <a
