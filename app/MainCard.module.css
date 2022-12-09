@@ -39,7 +39,7 @@
 
 .card_main {
   position: absolute;
-  gap:.625rem;
+  gap:.425rem;
   top: 50%;
   left: 50%;
   display: flex;
