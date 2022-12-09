@@ -10,8 +10,7 @@
   padding: 1rem;
   display: grid;
   gap: 1.625rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   justify-content: center;
   grid-template-columns: repeat(1, 350px);
 }
@@ -25,7 +24,26 @@
   grid-column: span 1;
 }
 .last {
-  /* order: 0; */
+  order: 0;
+}
+
+.footer {
+  display: flex;
+  gap:1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+.footer_linkedin {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer_github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -61,5 +79,3 @@
     order: 4;
   }
 }
-
-

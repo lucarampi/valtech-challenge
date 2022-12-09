@@ -59,7 +59,7 @@
 .card_topTitle {
   text-align: center;
   letter-spacing: 0.2rem;
-  font: 300 .7rem "Roboto",sans-serif;
+  font: 300 .7rem;
 
 }
 
@@ -68,7 +68,6 @@
   letter-spacing: 0.1rem;
   font-weight: 700;
   font-size: 2rem;
-  font: 700 1.5rem "Roboto",sans-serif;
 }
 
 .card_info {
@@ -90,13 +89,16 @@
   visibility: visible;
   display: flex;
   opacity: 1;
-  top: 180px;
+  top: 185px;
   left: 50%;
 
 }
 .card_info p {
-  font: 400 14px "Roboto",sans-serif;
-
+  font: 400 14px;
+  
+}
+.card_info p::first-letter {
+  text-transform: capitalize;
 }
 
 

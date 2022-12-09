@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import MainCard from "./MainCard";
 
@@ -6,14 +5,15 @@ import PlaceCard from "./PlaceCard";
 import { PlaceCardType } from "../interfaces";
 import styles from "../styles/Home.module.css";
 import { getPlaces } from "../utils/getPlaces";
+import Image from "next/image";
 
 export default async function Page() {
-  let places: PlaceCardType[] = await getPlaces()
+  let places: PlaceCardType[] = await getPlaces();
 
   const mainCardData = {
     imageUrl:
       "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
-    mainTitle: "Valtech_",
+    mainTitle: "Valtech",
     topTitle: "Front-end",
     buttonText: "Get in touch",
     message:
@@ -46,15 +46,26 @@ export default async function Page() {
         )}
       </main>
       <footer className={styles.footer}>
+        <span>
+          Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/lucarampi"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.footer_linkedin}
+          >
+            Luca A.R.
+          </a>
+        </span>
         <a
           href="https://github.com/lucarampi/valtech-challenge"
           target="_blank"
           rel="noreferrer"
+          className={styles.footer_github}
         >
-          Developed by <span className={styles.logo}>Luca A.R.</span>
+          <Image alt="Github" src="/github-icon.png" width={20} height={20} />
         </a>
       </footer>
     </div>
   );
 }
-

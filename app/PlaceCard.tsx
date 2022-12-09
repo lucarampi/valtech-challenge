@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./PlaceCard.module.css";
+import styles from "../styles/PlaceCard.module.css";
 
 interface CardProps {
   buttonText: string;

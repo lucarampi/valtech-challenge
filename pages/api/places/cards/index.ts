@@ -25,7 +25,7 @@ export default async function handler(
         origin: '*',
         optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     });
-    
+
     if (req.method !== 'GET') {
         res.status(405).json({ body: 'Method Not Allowed' })
         return;
@@ -34,13 +34,14 @@ export default async function handler(
     try {
         const { data: places, error } = await supabaseClient
             .from(process.env.NEXT_PUBLIC_SUPABASE_TABLE!)
-            .select("*").order('mainTitle', { ascending: true })
-
+            .select("*")
+            
+        console.log(process.env.NEXT_PUBLIC_SUPABASE_TABLE!)
 
         if (error || places == null) throw error
 
         res.status(200).json({
-            data: places, message: [process.env.NEXT_PUBLIC_SUPABASE_TABLE,process.env.NEXT_PUBLIC_VERCEL_URL],
+            data: places, message: [process.env.NEXT_PUBLIC_SUPABASE_TABLE, process.env.NEXT_PUBLIC_VERCEL_URL],
         });
         res.end()
         return

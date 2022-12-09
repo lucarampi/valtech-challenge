@@ -1,11 +1,9 @@
-
-
 .title a:hover {
   text-decoration: underline;
 }
 
 .card {
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   position: relative;
   background-color: #111827;
@@ -16,30 +14,26 @@
   border-radius: 1rem;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-
 }
 .card:hover {
   box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
 
-.card_image{
+.card_image {
   object-position: center;
-  overflow:hidden;
-  object-fit:cover; 
+  overflow: hidden;
+  object-fit: cover;
   position: relative;
   filter: brightness(70%);
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  
 }
 .card:hover .card_image {
-  filter: brightness(50%)
+  filter: brightness(50%);
 }
-
 
 .card_main {
   position: absolute;
-  gap:.425rem;
+  gap: 0.425rem;
   top: 50%;
   left: 50%;
   display: flex;
@@ -57,21 +51,37 @@
 .card_topTitle {
   text-align: center;
   letter-spacing: 0.2rem;
-  font: 300 .7rem "Roboto",sans-serif;
-
+  font: 300 0.7rem;
 }
-
 
 .card_mainTitle {
   text-align: center;
   letter-spacing: 0.1rem;
   font-weight: 700;
-  font-size: 2rem;
-  font: 700 2.5rem "Roboto",sans-serif;
-  text-transform:lowercase;
+  font-size: 3rem;
+  text-transform: lowercase;
 }
 
+.card_mainTitle:after {
+  content: "_";
+  display: inline-block;
+  animation: blink .7s 10;
+  font-weight: bold;
+}
 
+@keyframes blink {
+
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
 
 .card_info {
   position: absolute;
@@ -79,37 +89,33 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  height:200px;
+  height: 200px;
   flex-direction: column;
   margin: 2rem auto;
   text-align: center;
   opacity: 0;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .card:hover .card_info {
-  overflow:hidden;
+  overflow: hidden;
   visibility: visible;
   display: flex;
   opacity: 1;
   top: 193px;
   left: 50%;
-
 }
 .card_info p {
-  font: 400 14px "Roboto",sans-serif;
-
+  font: 400 14px;
 }
-
 
 .card button {
   cursor: pointer;
-  text-transform:capitalize;
+  text-transform: capitalize;
   opacity: 0;
-  font-weight:700;
-  position:absolute;
+  font-weight: 700;
+  position: absolute;
   border: 2px solid white;
-  border-radius:.425rem;
+  border-radius: 0.425rem;
   padding: 10px 20px;
   bottom: 0%;
   left: 50%;
@@ -125,12 +131,11 @@
   bottom: 10%;
   left: 50%;
   opacity: 1;
-  
 }
 .card button:hover {
   background-color: white;
   color: black;
-  border-color:transparent;
+  border-color: transparent;
   outline: 2px solid white;
   outline-offset: 3px;
 }

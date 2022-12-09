@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./MainCard.module.css";
+import styles from "../styles/MainCard.module.css";
 
 export interface MainCardProps {
   buttonText: string;
