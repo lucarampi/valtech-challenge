@@ -7,14 +7,17 @@ import { PlaceCardType } from "../interfaces";
 import api from "../services/axios";
 import styles from "../styles/Home.module.css";
 
-
-
 export default async function Page() {
   let places: PlaceCardType[] = [];
-  const { data } = await api.get("api/places/cards");
-  if (!data.data) places = [];
-  else places = data.data;
-  console.log(places);
+  try {
+    const { data } = await api.get("api/places/cards");
+    if (!!data.erro || !data.data) throw data.error;
+    places = data.data || [];
+    console.log(places);
+  } catch (error) {
+    places = [];
+    console.log("error");
+  }
 
   const mainCardData = {
     imageUrl:
@@ -25,7 +28,6 @@ export default async function Page() {
     message:
       "Complexity, uncertainty and rapid technological change have transformed the business landscape. Historical performance is an unreliable indicator of future success and the way we connect to each other matters. The way we learn matters. ",
   };
-
 
   return (
     <div className={styles.container}>
