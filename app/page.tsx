@@ -11,12 +11,12 @@ export default async function Page() {
   let places: PlaceCardType[] = [];
   try {
     const { data } = await api.get("api/places/cards");
+    console.log(data.data);
     if (!!data.erro || !data.data) throw data.error;
-    console.log(places);
     places = data.data || [];
   } catch (error) {
     places = [];
-    console.log("ERROR >>>", error);
+    console.error("ERROR >>>", error);
   }
 
   const mainCardData = {

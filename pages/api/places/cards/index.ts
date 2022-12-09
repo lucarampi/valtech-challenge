@@ -37,7 +37,6 @@ export default async function handler(
         res.status(200).json({
             data: {...places}, message: "Places selected successfully!",
         });
-        res.end()
         return
 
     } catch (error) {
@@ -46,7 +45,6 @@ export default async function handler(
             message: "Error while getting data!",
             error: error,
         });
-        res.end()
         return;
     }
 
