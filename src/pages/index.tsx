@@ -12,15 +12,16 @@ interface HomeProps {
 }
 
 export default function Home({ places }: HomeProps) {
-  const [mainCardData, setMainCardData] = useState<MainCardProps>({
-    imageUrl:
-      "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
-    mainTitle: "Valtech_",
-    topTitle: "Front-end",
-    buttonText: "Get in touch",
-    message:
-      "Complexity, uncertainty and rapid technological change have transformed the business landscape. Historical performance is an unreliable indicator of future success and the way we connect to each other matters. The way we learn matters. ",
-  });
+  console.log(places)
+  // const [mainCardData, setMainCardData] = useState<MainCardProps>({
+  //   imageUrl:
+  //     "https://fqgiwjnywbpxoliwncof.supabase.co/storage/v1/object/public/valtech/others/asdasd%20(2).png",
+  //   mainTitle: "Valtech_",
+  //   topTitle: "Front-end",
+  //   buttonText: "Get in touch",
+  //   message:
+  //     "Complexity, uncertainty and rapid technological change have transformed the business landscape. Historical performance is an unreliable indicator of future success and the way we connect to each other matters. The way we learn matters. ",
+  // });
 
   return (
     <div className={styles.container}>
@@ -65,7 +66,8 @@ export default function Home({ places }: HomeProps) {
 export async function getServerSideProps() {
   let places = [];
   const { data } = await api.get("api/places/cards");
-  if (!!data) places = data.data;
+  if (!data) places = []
+  else places = data.data;
   console.log(places);
   return {
     props: { places }, // will be passed to the page component as props
