@@ -35,17 +35,17 @@ export default async function handler(
         if (error || places == null) throw error
 
         res.status(200).json({
-            data: {...places}, message: "Places selected successfully!",
+            data: places, message: "Places selected successfully!",
         });
-        return
-
+        res.end()
     } catch (error) {
         res.status(500).json({
             data: [],
             message: "Error while getting data!",
             error: error,
         });
-        return;
+        res.end()
     }
+    return;
 
 }
