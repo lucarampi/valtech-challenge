@@ -41,24 +41,20 @@ export default async function Page() {
         <div className={styles.fill}>
           <MainCard {...mainCardData} />
         </div>
-        {places.length > 0 ? (
-          places.map((item, index) => (
-            <div
-              key={item.id}
-              className={
-                index === 0
-                  ? styles.square
-                  : index === 5
-                  ? `${styles.square} ${styles.last}`
-                  : ""
-              }
-            >
-              <PlaceCard {...item} />
-            </div>
-          ))
-        ) : (
-          <div> Could not load data...</div>
-        )}
+        {places.map((item, index) => (
+          <div
+            key={item.id}
+            className={
+              index === 0
+                ? styles.square
+                : index === 5
+                ? `${styles.square} ${styles.last}`
+                : ""
+            }
+          >
+            <PlaceCard {...item} />
+          </div>
+        ))}
       </main>
       <footer className={styles.footer}>
         <a
