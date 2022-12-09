@@ -58,9 +58,3 @@ export default async function Page() {
   );
 }
 
-// export async function getServerSideProps() {
-
-//   return {
-//     props: { places }, // will be passed to the page component as props
-//   };
-// }
