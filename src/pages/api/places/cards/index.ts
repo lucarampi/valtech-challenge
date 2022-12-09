@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { supabaseClient } from '../../../../services/supabase'
 import NextCors from 'nextjs-cors';
-import PlaceCardType from '../../../../interfaces';
+import { PlaceCardType } from '../../../../interfaces';
 
 type ResponseDataType = {
     data: PlaceCardType[],

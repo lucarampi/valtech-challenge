@@ -3,7 +3,7 @@ import { useState } from "react";
 import MainCard, { MainCardProps } from "../components/MainCard";
 
 import PlaceCard from "../components/PlaceCard";
-import PlaceCardType from "../interfaces";
+import {PlaceCardType} from "../interfaces";
 import api from "../services/axios";
 import styles from "../styles/Home.module.css";
 
@@ -11,7 +11,7 @@ interface HomeProps {
   places: PlaceCardType[];
 }
 
-export default function Home({ places }: HomeProps) {
+export default function Home({ places=[] }: HomeProps) {
   console.log(places)
   // const [mainCardData, setMainCardData] = useState<MainCardProps>({
   //   imageUrl:
@@ -63,13 +63,13 @@ export default function Home({ places }: HomeProps) {
   );
 }
 
-export async function getServerSideProps() {
-  let places = [];
-  const { data } = await api.get("api/places/cards");
-  if (!data) places = []
-  else places = data.data;
-  console.log(places);
-  return {
-    props: { places }, // will be passed to the page component as props
-  };
-}
+// export async function getServerSideProps() {
+//   let places = [];
+//   const { data } = await api.get("api/places/cards");
+//   if (!data) places = []
+//   else places = data.data;
+//   console.log(places);
+//   return {
+//     props: { places }, // will be passed to the page component as props
+//   };
+// }

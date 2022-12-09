@@ -1,4 +1,4 @@
-export default interface PlaceCardType{
+export interface PlaceCardType{
     buttonText: string;
     topTitle: string;
     mainTitle: string;
