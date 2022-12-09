@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.css";
 export default async function Page() {
   let places: PlaceCardType[] = [];
   const { data } = await api.get("api/places/cards");
-  if (!data) places = [];
+  if (!data.data) places = [];
   else places = data.data;
   console.log(places);
 
