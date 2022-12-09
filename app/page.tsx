@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import MainCard, { MainCardProps } from "../components/MainCard";
+import MainCard from "./MainCard";
 
-import PlaceCard from "../components/PlaceCard";
+import PlaceCard from "./PlaceCard";
 import { PlaceCardType } from "../interfaces";
 import api from "../services/axios";
 import styles from "../styles/Home.module.css";
@@ -11,7 +11,7 @@ export default async function Page() {
   let places: PlaceCardType[] = [];
   try {
     const { data } = await api.get("api/places/cards");
-    console.log(data.data);
+    console.log("PLACES >>>",data.data);
     if (!!data.erro || !data.data) throw data.error;
     places = data.data || [];
   } catch (error) {
