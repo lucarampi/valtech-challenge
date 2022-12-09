@@ -12,8 +12,8 @@ export default async function Page() {
   try {
     const { data } = await api.get("api/places/cards");
     if (!!data.erro || !data.data) throw data.error;
-    places = data.data || [];
     console.log(places);
+    places = data.data || [];
   } catch (error) {
     places = [];
     console.log("ERROR >>>", error);

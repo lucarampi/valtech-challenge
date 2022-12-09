@@ -40,7 +40,7 @@ export default async function handler(
         if (error || places == null) throw error
 
         res.status(200).json({
-            data: places, message: "Places selected successfully!",
+            data: {...places}, message: "Places selected successfully!",
         });
         res.end()
         return
