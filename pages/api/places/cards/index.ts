@@ -36,7 +36,6 @@ export default async function handler(
             .from(process.env.NEXT_PUBLIC_SUPABASE_TABLE!)
             .select("*")
             
-        console.log(process.env.NEXT_PUBLIC_SUPABASE_TABLE!)
 
         if (error || places == null) throw error
 
